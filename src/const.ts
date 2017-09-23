@@ -1,0 +1,1 @@
+export var compiler = 'pretty typescript';
