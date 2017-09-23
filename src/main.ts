@@ -1,4 +1,5 @@
 import { compiler } from './const';
+import * as http from 'http';
 
 function hello(compiler: string) {
     console.log(`Hello, from ${compiler}`);
