@@ -1,13 +1,14 @@
 {
     "include": [
-        "./src/**/*"
+        "src/**/*"
     ],
     "compilerOptions": {
-        "outDir": "./dist",
+        "outDir": "dist",
         "noImplicitAny": true,
         "target": "es5",
         "removeComments": true,
         "allowJs": true,
+        "sourceMap": true,
         "module": "commonjs",
         "lib": [
             "es7",

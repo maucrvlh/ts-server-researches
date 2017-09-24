@@ -35,9 +35,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var const_1 = require("./const");
+var a;
+var b;
+(_a = { a: 'mau', b: 'ricio' }, a = _a.a, b = _a.b);
+var list = [1, 2, 3];
+console.log(a, b);
 function hello(compiler) {
-    console.log("Hello, from " + compiler);
+    console.log("1. Hellooooo, from " + compiler);
 }
 function t() {
     return new Promise(function (resolve) {
@@ -46,8 +50,6 @@ function t() {
         }, 300);
     });
 }
-hello(const_1.compiler);
-t().then(function () { return console.log('foi!;)'); });
 function openFile() {
     return new Promise(function (resolve, reject) {
         var fakeFile = { fileId: Math.round(Math.random() * 999) };
@@ -77,6 +79,21 @@ function processFile() {
         });
     });
 }
-processFile()
-    .then(function (file) { return console.log(file); })
-    .catch(function (err) { return console.error(err); });
+function parallelFile() {
+    return __awaiter(this, void 0, void 0, function () {
+        var _a, fileDescriptor, fileContent, _b;
+        return __generator(this, function (_c) {
+            switch (_c.label) {
+                case 0: return [4, openFile()];
+                case 1:
+                    _b = [_c.sent()];
+                    return [4, readFile(null)];
+                case 2:
+                    _a = _b.concat([_c.sent()]), fileDescriptor = _a[0], fileContent = _a[1];
+                    return [2, Object.assign({}, fileDescriptor, fileContent)];
+            }
+        });
+    });
+}
+var _a;
+//# sourceMappingURL=main.js.map

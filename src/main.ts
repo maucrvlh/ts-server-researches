@@ -1,8 +1,17 @@
 import { compiler } from './const';
 import * as http from 'http';
 
+let a: string;
+let b: string;
+
+({a, b} = {a: 'mau', b: 'ricio'});
+
+let list: Array<number> = [1,2,3];
+console.log(a,b);
+
+
 function hello(compiler: string) {
-    console.log(`Hello, from ${compiler}`);
+    console.log(`1. Hellooooo, from ${compiler}`);
 }
 
 function t() {
@@ -13,9 +22,9 @@ function t() {
     });
 }
 
-hello(compiler);
+// hello(compiler);
 
-t().then(() => console.log('foi!;)'));
+// t().then(() => console.log('foi!;)'));
 
 function openFile(): Promise<object> {
     return new Promise((resolve, reject) => {        
@@ -42,6 +51,11 @@ async function processFile() {
     return fileContent;
 }
 
-processFile()
-    .then(file => console.log(file))
-    .catch(err => console.error(err));
+async function parallelFile() {
+    let [fileDescriptor, fileContent] = [await openFile(), await readFile(null)];
+    return Object.assign({}, fileDescriptor, fileContent);
+}
+
+// parallelFile()
+//     .then(file => console.log(file))
+//     .catch(err => console.error(err));
