@@ -1,13 +1,17 @@
 import { compiler } from './const';
+import C from './testes';
 import * as http from 'http';
 
-let a: string;
-let b: string;
 
-({a, b} = {a: 'mau', b: 'ricio'});
 
-let list: Array<number> = [1,2,3];
-console.log(a,b);
+let obj1 = { a: 1, b: 2, c: 3 };
+
+let spread = { ...obj1, b: 4 };
+
+console.log(spread);
+console.log((new C).m());
+
+// -------------------------------
 
 
 function hello(compiler: string) {
