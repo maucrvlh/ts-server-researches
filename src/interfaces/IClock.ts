@@ -1,5 +1,5 @@
 interface IClock {
-    currentTime: string,
+    currentTime: Date,
     setTime(d: Date): Date
 }
 

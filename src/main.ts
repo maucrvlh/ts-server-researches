@@ -1,6 +1,7 @@
 import { compiler } from './const';
 import C from './testes';
 import * as http from 'http';
+import Employee from './classes/Employee';
 
 
 
@@ -10,6 +11,9 @@ let spread = { ...obj1, b: 4 };
 
 console.log(spread);
 console.log((new C).m());
+
+let joao = new Employee("João", "RH");
+console.log(joao.getElevatorPitch());
 
 // -------------------------------
 
