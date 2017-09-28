@@ -2,6 +2,7 @@ import { compiler } from './const';
 import C from './testes';
 import * as http from 'http';
 import Employee from './classes/Employee';
+import Extend from './classes/Extend';
 
 
 
@@ -14,6 +15,9 @@ console.log((new C).m());
 
 let joao = new Employee("João", "RH");
 console.log(joao.getElevatorPitch());
+
+Extend.test();
+
 
 // -------------------------------
 

@@ -45,12 +45,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var testes_1 = require("./testes");
 var Employee_1 = require("./classes/Employee");
+var Extend_1 = require("./classes/Extend");
 var obj1 = { a: 1, b: 2, c: 3 };
 var spread = __assign({}, obj1, { b: 4 });
 console.log(spread);
 console.log((new testes_1.default).m());
 var joao = new Employee_1.default("João", "RH");
 console.log(joao.getElevatorPitch());
+Extend_1.default.test();
 function hello(compiler) {
     console.log("1. Hellooooo, from " + compiler);
 }
